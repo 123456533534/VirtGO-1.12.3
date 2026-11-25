@@ -1,0 +1,267 @@
+<resources>
+    <string name="app_name">影梭</string>
+    <string name="app_settings">设置</string>
+    <string name="app_history">历史记录</string>
+    <string name="app_author">ZCShou</string>
+    <string name="app_email">zcsexp@gmail.com</string>
+    <string name="app_statement">仅供学习使用，否则后果自负！</string>
+    <string name="app_service_tips">影梭服务正在运行中</string>
+    <string name="app_agreement">用户协议</string>
+    <string name="app_agreement_content">"1. 本软件专为学习 Android 开发使用，不会收集任何用户数据。"
+    "严禁利用本软件侵犯他人隐私权或者用于游戏牟利，如软件使用者不能遵守此规定， 请立即删除。"
+    "对于因用户使用本软件而造成自身或他人隐私泄露等任何不良后果，均由用户自行承担，软件作者不负任何责任。\n"
+    "2. 用户不得对本软件产品进行反向工程（reverse engineer）、反向编译（decompile）或反汇编（disassemble）， 违者属于侵权行为，并自行承担由此产生的不利后果。\n"
+    "3. 软件保证不含任何病毒，木马，等破坏用户数据的恶意代码，但是由于本软件产品可以通过网络等途径下载、传播，对于从非软件作者指定站点下载的本软件产品软件作者无法保证该软件是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，不承担由此引起的直接和间接损害责任。\n"
+    "4. 软件会不断更新，以便及时为用户提供新功能和修正软件中的BUG。 同时软件作者保证本软件在升级过程中也不含有任何旨在破坏用户计算机数据的恶意代码。\n"
+    "5. 由于用户计算机软硬件环境的差异性和复杂性，本软件所提供的各项功能并不能保证在任何情况下都能正常执行或达到用户所期望的结果。 用户使用本软件所产生的一切后果，软件作者不承担任何责任。\n"
+    "6. 如果用户自行安装本软件，即表明用户信任软件作者，自愿选择安装本软件，并接受本协议所有条款。 如果用户不接受本协议，请立即删除。\n"
+    </string>
+    <string name="app_privacy">隐私政策</string>
+    <string name="app_privacy_content">"1. 本软件专为学习 Android 开发使用，不会收集任何用户数据。\n"
+    "2. 用户不得对本软件产品进行反向工程（reverse engineer）、反向编译（decompile）或反汇编（disassemble）， 违者属于侵权行为，并自行承担由此产生的不利后果。\n"
+    "3. 软件保证不含任何病毒，木马，等破坏用户数据的恶意代码，但是由于本软件产品可以通过网络等途径下载、传播，对于从非软件作者指定站点下载的本软件产品软件作者无法保证该软件是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，不承担由此引起的直接和间接损害责任。\n"
+    "4. 软件会不断更新，以便及时为用户提供新功能和修正软件中的BUG。 同时软件作者保证本软件在升级过程中也不含有任何旨在破坏用户计算机数据的恶意代码。\n"
+    "5. 由于用户计算机软硬件环境的差异性和复杂性，本软件所提供的各项功能并不能保证在任何情况下都能正常执行或达到用户所期望的结果。 用户使用本软件所产生的一切后果，软件作者不承担任何责任。\n"
+    "6. 如果用户自行安装本软件，即表明用户信任软件作者，自愿选择安装本软件，并接受本协议所有条款。 如果用户不接受本协议，请立即删除。\n"
+    </string>
+    <string name="app_agreement_privacy">已阅读《用户协议》和《隐私政策》</string>
+    <string name="app_error_agreement">必须先接受\n《用户协议》和《隐私政策》</string>
+    <string name="app_error_read">请依次阅读并接受\n《用户协议》和《隐私政策》</string>
+    <string name="app_error_gps">定位不可用，请检查 GPS 是否开启</string>
+    <string name="app_error_network">网络不可用，请检查网络连接</string>
+    <string name="app_error_permission">权限不足，请授予相关权限</string>
+    <string name="app_error_input">输入有误，请检查输入是否合法</string>
+    <string name="app_error_input_null">输入不能为空，请重新输入内容</string>
+    <string name="app_error_search">查找失败，请检查网络或定位</string>
+    <string name="app_error_location">请先选择位置</string>
+    <string name="app_error_dev">开发者模式未开启，无法跳转！请自行搜索开启方法</string>
+    <string name="app_error_param">非法参数</string>
+    <string name="app_error_protocol">请先阅读并接收用户协议</string>
+    <string name="app_error_username">用户名不合法</string>
+    <string name="app_error_code">注册码不能为空</string>
+    <string name="app_error_longitude">经度超出限制!\n取值：-180.0 ~ 180.0</string>
+    <string name="app_error_latitude">纬度超出限制!\n取值：-90.0 ~ 90.0</string>
+    <string name="app_search_null">没有匹配结果，请重新搜索</string>
+    <string name="app_search_tips">请输入查找内容</string>
+    <string name="app_location_ok">位置已传送</string>
+    <string name="app_location_copy">位置已复制到剪切板</string>
+    <string name="app_location_save">位置已保存</string>
+
+    <!-- 欢迎页 -->
+    <string name="welcome_btn_txt">进入应用</string>
+    <string name="app_btn_agree">同意并继续</string>
+    <string name="app_btn_disagree">不同意</string>
+
+    <!-- 移动相关参数 -->
+    <string name="setting_group_move">移动</string>
+    <string name="setting_joystick_type">摇杆类型</string>
+    <string name="setting_walk_cadence">步行步频(步/分)</string>
+    <string name="setting_walk_cadence_default">100</string>
+    <string name="setting_walk_stride">步行步幅(米/步)</string>
+    <string name="setting_walk_stride_default">0.72</string>
+    <string name="setting_run_cadence">跑步步频(步/分)</string>
+    <string name="setting_run_cadence_default">180</string>
+    <string name="setting_run_stride">跑步步幅(米/步)</string>
+    <string name="setting_run_stride_default">1.2</string>
+    <string name="setting_bike">驾驶速度(米/秒)</string>
+    <string name="setting_bike_default">10.0</string>
+    <string name="setting_altitude">海拔高度(米)</string>
+    <string name="setting_altitude_default">55.0</string>
+
+    <!-- 位置偏移相关参数 -->
+    <string name="setting_group_location_offset">位置偏移</string>
+    <string name="setting_random_offset">随机偏移</string>
+    <string name="setting_random_offset_summary">仅在使用历史位置时生效</string>
+    <string name="setting_random_offset_default">10.0</string>
+    <string name="setting_lat_max_offset">经度最大偏移距离(米)</string>
+    <string name="setting_lon_max_offset">纬度最大偏移距离(米)</string>
+    <!-- 记录相关参数 -->
+    <string name="setting_group_log">记录</string>
+    <string name="setting_log_off">关闭日志</string>
+    <string name="setting_history_expiration">历史记录有效期(天)</string>
+    <!-- 地图密钥相关参数 -->
+    <string name="setting_group_map_key">地图密钥</string>
+    <string name="setting_map_key">百度地图 AK</string>
+    <string name="setting_map_key_summary">填入自己的百度地图 AK，留空则使用内置值</string>
+    <string name="setting_map_safe_code">百度安全码(mcode)</string>
+    <string name="setting_map_safe_code_summary">反地理编码接口使用的安全码，留空则使用内置值</string>
+    <string name="setting_amap_key">高德地图 AK(预留)</string>
+    <string name="setting_amap_key_summary">仅保存备用，当前版本地图渲染仍使用百度</string>
+    <string name="setting_tencent_key">腾讯地图 AK(预留)</string>
+    <string name="setting_tencent_key_summary">仅保存备用，当前版本地图渲染仍使用百度</string>
+    <!-- 关于相关参数 -->
+    <string name="setting_group_about">关于</string>
+    <string name="setting_version">版本号</string>
+    <string name="setting_author">开发者</string>
+
+    <!-- 历史记录页面 -->
+    <string name="history_expiration">7</string>
+    <string name="history_location_default_name">地图位置</string>
+    <string name="history_idle">暂无历史记录</string>
+    <string name="history_delete_ok">删除成功！</string>
+    <string name="history_delete_error">删除记录失败</string>
+    <string name="history_error_location">定位失败，请手动选取定位点</string>
+    <string name="history_error_search">未搜索到指定内容</string>
+
+    <!-- 通知栏 -->
+    <string name="note_show">显示摇杆</string>
+    <string name="note_hide">隐藏摇杆</string>
+    <!-- 摇杆 -->
+    <string name="joystick_map_tips">搜索或点击地图位置</string>
+    <string name="joystick_history_tips">搜索或点击历史位置</string>
+    <string name="joystick_history">历史记录</string>
+    <string name="joystick_map">地图</string>
+    <string name="joystick_move">移动</string>
+    <string name="joystick_walk">步行</string>
+    <string name="joystick_run">跑步</string>
+    <string name="joystick_bike">自行车</string>
+    <!-- 导航页 -->
+    <string name="nav_drawer_open">打开导航菜单</string>
+    <string name="nav_drawer_close">关闭导航菜单</string>
+    <string name="nav_menu_history">历史记录</string>
+    <string name="nav_menu_settings">设置</string>
+    <string name="nav_menu_dev">开发人员选项</string>
+    <string name="nav_menu_more">更多</string>
+    <string name="nav_menu_feedback">问题反馈</string>
+    <string name="nav_menu_contact">联系作者</string>
+    <string name="nav_app_tips">仅供学习使用，否则后果自负!</string>
+
+    <!-- 主界面 -->
+    <string name="label_longitude">经度</string>
+    <string name="label_latitude">纬度</string>
+    <string name="input_position_ok">传送</string>
+    <string name="input_position_cancel">取消</string>
+    <string name="input_position_baidu">BD09 坐标系</string>
+    <string name="input_position_gps">GPS 坐标系</string>
+    <string name="input_button">输入位置</string>
+    <string name="cur_position">返回当前位置</string>
+    <string name="zoom_in">放大</string>
+    <string name="zoom_out">缩小</string>
+
+    <!-- 百度地图 -->
+    <string name="map_pic_sate">卫星图</string>
+    <string name="map_pic_normal">普通图</string>
+
+    <!-- ============ 深色化改造：全局胶囊底部导航 ============ -->
+    <string name="nav_location">位置</string>
+    <string name="nav_route">线路</string>
+    <string name="nav_favorite">收藏</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- ============ 深色化改造：位置模拟页 ============ -->
+    <string name="top_search_hint">搜索地点或输入坐标</string>
+    <string name="chip_map_normal">标准</string>
+    <string name="chip_map_satellite">卫星</string>
+    <string name="chip_map_night">夜间</string>
+    <string name="map_night_tips">夜间底图样式将在后续版本接入</string>
+    <string name="center_marker_label">当前选中位置</string>
+    <string name="status_badge_idle">未启动</string>
+    <string name="status_badge_running">模拟中</string>
+    <string name="card_location_hint">点击地图选择位置</string>
+    <string name="btn_start_simulate">开始位置模拟</string>
+    <string name="btn_favorite_desc">收藏当前位置</string>
+
+    <!-- ============ 深色化改造：设置页新增视觉项 ============ -->
+    <string name="settings_title">设置</string>
+    <string name="settings_subtitle">调整模拟速度、摇杆与运动参数</string>
+    <string name="setting_group_joystick">悬浮摇杆</string>
+    <string name="setting_move_direction">移动方向</string>
+    <string name="setting_move_direction_default">自动</string>
+    <string name="setting_location_accuracy">定位精度(米)</string>
+    <string name="setting_location_accuracy_default">5</string>
+    <string name="setting_update_interval">更新间隔(毫秒)</string>
+    <string name="setting_update_interval_default">1000</string>
+    <string name="setting_joystick_show">显示悬浮摇杆</string>
+    <string name="setting_joystick_show_summary">在地图上显示可拖动的悬浮摇杆</string>
+
+    <!-- ============ 深色化改造：线路编辑页 ============ -->
+    <string name="route_title">编辑线路</string>
+    <string name="route_save">保存</string>
+    <string name="route_back_desc">返回</string>
+    <string name="route_map_hint">线路轨迹示意</string>
+    <string name="route_node_count">节点</string>
+    <string name="route_distance">距离</string>
+    <string name="route_eta">预计</string>
+    <string name="route_distance_value">2.4 km</string>
+    <string name="route_eta_value">18 min</string>
+    <string name="route_node_1">解放路·起点</string>
+    <string name="route_node_2">泉城广场</string>
+    <string name="route_node_3">千佛山·终点</string>
+    <string name="btn_delete_node">删除节点</string>
+    <string name="btn_start_route_simulate">开始线路模拟</string>
+    <string name="route_saved_tips">线路已保存</string>
+    <string name="route_simulate_tips">线路模拟将在后续版本接入</string>
+
+    <!-- ============ P1 增量：速度分段控件（按钮文字复用 joystick_walk/run/bike，不重复定义） ============ -->
+    <string name="setting_speed_mode">速度模式</string>
+    <string name="setting_speed_mode_summary">与悬浮摇杆三按钮同步</string>
+
+    <!-- ============ 白色化增量：多途经点 / 收藏 / 插值回放 ============ -->
+    <string name="route_speed_label">速度档位</string>
+    <string name="route_add_node">新增途经点</string>
+    <string name="route_favorites">收藏线路</string>
+    <string name="route_pause_playback">暂停</string>
+    <string name="route_resume_playback">继续</string>
+    <string name="route_stop_playback">停止</string>
+    <string name="route_move_up_desc">上移节点</string>
+    <string name="route_move_down_desc">下移节点</string>
+    <string name="route_node_name_hint">节点名称</string>
+    <string name="route_node_lng_hint">经度（WGS84，-180 ~ 180）</string>
+    <string name="route_node_lat_hint">纬度（WGS84，-90 ~ 90）</string>
+    <string name="route_node_start">起点</string>
+    <string name="route_node_end">终点</string>
+    <string name="route_dialog_node_title">手动输入途经点</string>
+    <string name="route_dialog_add_source_title">选择坐标来源</string>
+    <string name="route_input_manual">手动输入经纬度</string>
+    <string name="route_pick_history">从历史位置点选择</string>
+    <string name="route_history_pick_title">选择历史位置点</string>
+    <string name="route_history_empty">暂无历史位置点</string>
+    <string name="route_save_name_title">线路名称</string>
+    <string name="route_save_name_hint">给这条线路起个名字</string>
+    <string name="route_fav_empty">还没有收藏的线路</string>
+    <string name="route_fav_rename">重命名</string>
+    <string name="route_fav_delete">删除</string>
+    <string name="route_fav_delete_confirm">确定删除这条线路吗？</string>
+    <string name="route_fav_count">%1$d 个点</string>
+    <string name="route_fav_loaded">线路已载入</string>
+    <string name="route_invalid_number">请输入合法数字</string>
+    <string name="route_invalid_coord">经纬度超出合法范围</string>
+    <string name="route_node_added">已添加途经点</string>
+    <string name="route_no_nodes">请先添加至少一个途经点</string>
+    <string name="route_playback_starting">服务启动中，即将开始回放…</string>
+    <string name="route_playback_started">线路回放已开始</string>
+    <string name="route_playback_paused">线路回放已暂停</string>
+    <string name="route_playback_resumed">线路回放已继续</string>
+    <string name="route_playback_stopped">线路回放已停止</string>
+    <string name="route_playback_no_service">服务未就绪，请稍后再试</string>
+    <string name="route_distance_km_fmt">%1$.2f km</string>
+    <string name="route_distance_m_fmt">%1$.0f m</string>
+    <string name="route_eta_min_fmt">%1$d min</string>
+    <string name="route_eta_sec_fmt">%1$d s</string>
+    <string name="open_route_favorites">打开线路收藏</string>
+
+    <!-- ============ 多点路线改造：位置页 / 悬浮窗新增文案（只增不删） ============ -->
+    <string name="route_info_fmt">已添加 %1$d 个点 | %2$d m</string>
+    <string name="route_undo">撤销</string>
+    <string name="route_clear">清空</string>
+    <string name="route_favorite_line">收藏整条路线</string>
+    <string name="route_open_favorites">打开收藏</string>
+    <string name="route_marker_desc">路线节点</string>
+    <string name="route_fav_pick_hint">选择一条线路回填到位置页</string>
+    <string name="joystick_start_simulate">开始模拟</string>
+    <string name="joystick_stop_simulate">结束模拟</string>
+    <string name="joystick_collapse">收起悬浮窗</string>
+    <string name="joystick_expand">展开悬浮窗</string>
+    <string name="joystick_drag_handle">拖动悬浮窗</string>
+    <string name="route_too_few_points">至少需要 2 个点才能收藏</string>
+    <string name="route_playback_started_from_float">已从悬浮窗开始线路模拟</string>
+    <string name="route_playback_stopped_from_float">已从悬浮窗结束线路模拟</string>
+
+    <!-- ============ 点/画模式切换 + 闭环圈数（只增不删） ============ -->
+    <string name="mode_point">点</string>
+    <string name="mode_draw">画</string>
+    <string name="route_closed_hint">已闭合 · 跑 %1$d 圈</string>
+    <string name="route_loops_label">圈数</string>
+    <string name="route_loops_hint">闭环后回放圈数（1-99）</string>
+    <string name="route_draw_tips">画模式：按住地图滑动绘制，松手结束；首尾接近自动闭环</string>
+</resources>

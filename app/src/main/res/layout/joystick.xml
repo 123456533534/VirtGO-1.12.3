@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 悬浮窗：可拖动容器；展开态=收起按钮+摇杆+速度档+开始/结束，收起态=入口按钮 -->
+<com.zcshou.joystick.DragFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/joystick_drag_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 展开面板 -->
+    <LinearLayout
+        android:id="@+id/joystick_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 收起：整行也可作为拖动手柄 -->
+        <LinearLayout
+            android:layout_width="@dimen/joystick_sim_panel_width"
+            android:layout_height="24dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/joystick_collapse"
+                android:layout_width="28dp"
+                android:layout_height="24dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/joystick_collapse"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_down" />
+        </LinearLayout>
+
+        <!-- 方向按钮：仅当设置里切换为方向键模式时显示（摇杆模式默认隐藏） -->
+        <com.zcshou.joystick.ButtonView
+            android:id="@+id/joystick_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 摇杆：主要移动操作 -->
+        <com.zcshou.joystick.RockerView
+            android:id="@+id/joystick_rocker"
+            android:layout_width="@dimen/joystick_rockerview_width"
+            android:layout_height="@dimen/joystick_rockerview_height" />
+
+        <!-- 速度档：步行 / 跑步 / 骑行，复用既有图标与文案 -->
+        <LinearLayout
+            android:layout_width="@dimen/joystick_sim_panel_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/joystick_speed_btn_size"
+                android:layout_height="@dimen/joystick_speed_btn_size"
+                android:background="@drawable/circle_shape_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/joystick_walk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/joystick_walk"
+                    android:src="@drawable/ic_walk" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="@dimen/joystick_speed_btn_size"
+                android:layout_height="@dimen/joystick_speed_btn_size"
+                android:background="@drawable/circle_shape_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/joystick_run"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/joystick_run"
+                    android:src="@drawable/ic_run" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="@dimen/joystick_speed_btn_size"
+                android:layout_height="@dimen/joystick_speed_btn_size"
+                android:background="@drawable/circle_shape_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/joystick_bike"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/joystick_bike"
+                    android:src="@drawable/ic_bike" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 开始 / 结束模拟 -->
+        <LinearLayout
+            android:layout_width="@dimen/joystick_sim_panel_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/joystick_start_simulate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/joystick_sim_btn_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chip"
+                android:contentDescription="@string/joystick_start_simulate"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_fly" />
+
+            <ImageButton
+                android:id="@+id/joystick_stop_simulate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/joystick_sim_btn_height"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chip"
+                android:contentDescription="@string/joystick_stop_simulate"
+                android:enabled="false"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_close" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 收起态入口：始终清晰可见，点击展开 -->
+    <ImageButton
+        android:id="@+id/joystick_entry"
+        android:layout_width="@dimen/joystick_entry_size"
+        android:layout_height="@dimen/joystick_entry_size"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_circle_btn"
+        android:contentDescription="@string/joystick_expand"
+        android:padding="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_up"
+        android:visibility="gone" />
+
+</com.zcshou.joystick.DragFrameLayout>

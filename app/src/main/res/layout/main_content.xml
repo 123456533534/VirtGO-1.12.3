@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            layout="@layout/main_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize" />
+
+        <!-- 深色化新增：顶部搜索栏视觉，点击展开既有 Toolbar SearchView -->
+        <TextView
+            android:id="@+id/top_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/bg_chip"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/text_secondary"
+            android:gravity="center_vertical"
+            android:hint="@string/top_search_hint"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/faBtnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="380dp"
+            android:contentDescription="@null"
+            app:backgroundTint="@color/dark_surface_2"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_position"
+            app:tint="@color/dark_accent" />
+
+        <!-- 搜索建议结果：深色列表，位置下移到视觉搜索栏之下 -->
+        <LinearLayout
+            android:id="@+id/search_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_surface"
+            android:visibility="gone"
+            android:layout_marginTop="126dp">
+            <ListView
+                android:id="@+id/search_list_view"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:divider="@color/dark_border"
+                android:dividerHeight="1dp">
+            </ListView>
+        </LinearLayout>
+
+        <!-- 搜索历史：深色列表 -->
+        <LinearLayout
+            android:id="@+id/search_history_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_surface"
+            android:visibility="gone"
+            android:layout_marginTop="126dp">
+            <ListView
+                android:id="@+id/search_history_list_view"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:divider="@color/dark_border"
+                android:dividerHeight="1dp">
+            </ListView>
+        </LinearLayout>
+
+        <!-- 深色化新增：全局胶囊底部导航（抽屉导航逻辑保持不变） -->
+        <com.zcshou.gogogo.widget.BottomNavView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

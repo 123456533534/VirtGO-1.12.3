@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- 系统主题默认主题：强制浅色，不跟随系统（不用 DayNight）。
+         AppCompat 1.5.1 中浅色基底的正式样式名就是 Theme.AppCompat.Light
+         （不存在 Theme.AppCompat.DarkActionBar，只有 Light.DarkActionBar）。 -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/AppTheme.Button</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/dark_bg</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">sans</item>
+        <!-- Preference 与 Dialog 必须挂在 AppTheme 层，Fragment 才能解析到 -->
+        <item name="preferenceTheme">@style/AppTheme.PreferenceTheme</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog</item>
+    </style>
+
+    <!-- 无ActionBar -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- AppCompat 1.5.1 无 ThemeOverlay.AppCompat.Light.ActionBar（已查 AAR），
+         ThemeOverlay.AppCompat.ActionBar 即浅色 ActionBar overlay，等价且可编译。 -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <!-- Toolbar 弹出菜单转浅，消除深色残留 -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- PreferenceFragmentCompat 专用深色主题：parent 必须写全 @style/ 前缀 -->
+    <style name="AppTheme.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:colorBackground">@color/dark_surface</item>
+        <item name="android:windowBackground">@color/dark_surface</item>
+        <item name="colorAccent">@color/dark_accent</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialog</item>
+    </style>
+
+    <!-- EditTextPreference / ListPreference 弹出对话框：深色背景 + 可见文字 -->
+    <style name="AppTheme.AlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:colorBackground">@color/dark_surface_2</item>
+        <item name="android:windowBackground">@color/dark_surface_2</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="colorAccent">@color/dark_accent</item>
+        <item name="android:editTextStyle">@style/AppTheme.EditText</item>
+        <item name="editTextStyle">@style/AppTheme.EditText</item>
+        <!-- 对话框按钮单独换浅色样式，不污染全局 buttonStyle -->
+        <item name="buttonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarButtonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/AppTheme.DialogButton</item>
+    </style>
+
+    <!-- 对话框内输入框：保证输入文字不是黑色 -->
+    <style name="AppTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+    </style>
+
+    <!-- 参考 https://blog.csdn.net/qq_37299249/article/details/78536772 -->
+    <style name="RippleWhite" parent="ThemeOverlay.AppCompat.Light">
+        <!-- 点击后波纹的颜色 -->
+        <item name="android:colorControlHighlight">@color/dark_accent_dim</item>
+        <!-- 效果半径-->
+        <item name="android:radius">14dp</item>
+    </style>
+
+    <!-- dialog动画 -->
+    <style name="DialogAnimFadeInFadeOut" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_fade_out</item>
+    </style>
+
+    <!-- https://stackoverflow.com/questions/26346727/android-material-design-button-styles-->
+    <!-- Button：普通强调色按钮保持原样（白字配 dark_accent 底），不因白色化改动。 -->
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/dark_accent</item>
+        <item name="android:textColor">@color/dark_bg</item>
+    </style>
+
+    <!-- AlertDialog 专用按钮：无色/浅色底上必须用深色文字，避免白字白底不可见。
+         parent 用 Borderless（透明底），普通强调色按钮不受影响。 -->
+    <style name="AppTheme.DialogButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- P1 增量：只给速度分段子树换 MaterialComponents 主题，AppTheme 全局主题一行不动 -->
+    <style name="SpeedModeMaterialTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/dark_accent</item>
+        <item name="colorPrimaryDark">@color/dark_accent</item>
+        <item name="colorAccent">@color/dark_accent</item>
+        <item name="colorSecondary">@color/dark_accent</item>
+        <item name="colorOnPrimary">@color/dark_bg</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/dark_surface_2</item>
+        <item name="colorSurface">@color/dark_surface_2</item>
+        <item name="android:windowBackground">@color/dark_surface_2</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+</resources>

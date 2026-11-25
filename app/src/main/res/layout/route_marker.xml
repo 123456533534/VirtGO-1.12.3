@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 编号标记：圆形底 + 白字，供 BitmapDescriptorFactory.fromView 使用 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_route_marker_no"
+    android:layout_width="@dimen/route_marker_size"
+    android:layout_height="@dimen/route_marker_size"
+    android:minWidth="@dimen/route_marker_size"
+    android:minHeight="@dimen/route_marker_size"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:textColor="@color/white"
+    android:textSize="13sp"
+    android:textStyle="bold" />

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_surface_2"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ListView
+        android:id="@+id/lv_route_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:divider="@color/dark_border"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>
